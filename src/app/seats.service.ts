@@ -11,6 +11,6 @@ export class SeatService {
     constructor(private http: HttpClient) {}
 
     getSeats(movieId: Number) {
-        return this.http.get<Seat[]>(`http://localhost:3001/api/seats?MovieId=${movieId}`);
+        return this.http.get<Seat[]>(`/api/seats?MovieId=${movieId}`);
     }
 }
