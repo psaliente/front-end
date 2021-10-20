@@ -1,0 +1,12 @@
+<div>
+    <h3>Select Seats:</h3>
+    <div *ngFor="let seat of seats">
+        <div class="">
+            <a [title]="'seat' + seat.SeatLocation" (click)="selectSeat(seat)">
+                {{ seat.SeatLocation }}
+            </a>
+            <span *ngIf="seat.Occupied">occupied</span>
+        </div>
+    </div>
+    <button [routerLink]="'/payment'">Proceed to Payment</button>
+</div>
