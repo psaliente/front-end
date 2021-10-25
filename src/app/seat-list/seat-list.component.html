@@ -1,7 +1,7 @@
-<div>
+<div class="container">
     <h3>Select Seats:</h3>
-    <div *ngFor="let seat of seats">
-        <div class="">
+    <div *ngFor="let seat of seats" class="row">
+        <div class="col-xs-6 col-md-3 col-lg-2">
             <a [title]="'seat' + seat.SeatLocation" (click)="selectSeat(seat)">
                 {{ seat.SeatLocation }}
             </a>

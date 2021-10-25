@@ -1,11 +1,15 @@
-<h3>Select a movie:</h3>
-<div *ngFor="let movie of movies">
-    <h3>
-        <a [title]="movie.Title" [routerLink]="['/movies', movie.Id]">
-            {{movie.Title}}
-        </a>
-    </h3>
-    <p>
-        {{movie.Description}}
-    </p>
+<div class="container">
+    <div class="row">
+        <h3>Select a movie:</h3>
+        <div *ngFor="let movie of movies" class="col-xs-12">
+            <h3>
+                <a [title]="movie.Title" [routerLink]="['/movies', movie.Id]">
+                    {{movie.Title}}
+                </a>
+            </h3>
+            <p>
+                {{movie.Description}}
+            </p>
+        </div>
+    </div>
 </div>
