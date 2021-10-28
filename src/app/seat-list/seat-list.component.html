@@ -1,11 +1,12 @@
 <div class="container">
     <h3>Select Seats:</h3>
-    <div *ngFor="let seat of seats" class="row">
-        <div class="col-xs-6 col-md-3 col-lg-2">
-            <a [title]="'seat' + seat.SeatLocation" (click)="selectSeat(seat)">
-                {{ seat.SeatLocation }}
-            </a>
-            <span *ngIf="seat.Occupied">occupied</span>
+    <div class="row">
+        <div *ngFor="let seat of seats" class="col-xs-6 col-md-3 col-lg-2" >
+            <div [ngClass]="seat.Occupied ? 'bg-danger': 'bg-success'">
+                <a [title]="'seat' + seat.Location" (click)="selectSeat(seat)">
+                    {{ seat.Location }}
+                </a>
+            </div>
         </div>
     </div>
     <button [routerLink]="'/payment'">Proceed to Payment</button>

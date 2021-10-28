@@ -18,7 +18,8 @@ export class MovieListComponent implements OnInit {
         this.movieSvc.getMovies().subscribe((_movies: Movie[]) => {
             _movies.forEach((d: Movie) => {
                 this.movies.push({
-                    Id: d.Id,
+                    _id: d._id,
+                    Year: d.Year,
                     Title: d.Title,
                     Description: d.Description,
                     Thumbnail: d.Thumbnail,

@@ -18,14 +18,13 @@ export class SeatListComponent implements OnInit {
 
     ngOnInit() {
         const routeParams = this.route.snapshot.paramMap;
-        const movieId = Number(routeParams.get('MovieId'));
+        const movieId = String(routeParams.get('MovieId'));
         this.seatSvc.getSeats(movieId).subscribe((_seats: Seat[]) => {
             _seats.forEach((s: Seat) => {
                 this.seats.push({
-                    Id: s.Id,
-                    MovieId: s.MovieId,
+                    _id: s._id,
                     Occupied: s.Occupied,
-                    SeatLocation: s.SeatLocation
+                    Location: s.Location
                 });
             });
         });

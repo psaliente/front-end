@@ -2,8 +2,10 @@
     <div class="row">
         <h3>Select a movie:</h3>
         <div *ngFor="let movie of movies" class="col-xs-12">
+            <img *ngIf="movie.Thumbnail" [src]="movie.Thumbnail" alt="movie thumbnail" />
+            <img *ngIf="!movie.Thumbnail" src="/assets/no-image.png" alt="no image thumbnail" />
             <h3>
-                <a [title]="movie.Title" [routerLink]="['/movies', movie.Id]">
+                <a [title]="movie.Title" [routerLink]="['/movies', movie._id]">
                     {{movie.Title}}
                 </a>
             </h3>

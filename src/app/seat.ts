@@ -1,6 +1,5 @@
 export interface Seat {
-    Id: number;
-    MovieId: number;
-    SeatLocation: string;
+    _id: string;
+    Location: string;
     Occupied: boolean;
 }

@@ -9,6 +9,7 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { SeatListComponent } from './seat-list/seat-list.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

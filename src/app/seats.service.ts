@@ -10,7 +10,11 @@ export class SeatService {
 
     constructor(private http: HttpClient) {}
 
-    getSeats(movieId: Number) {
+    getSeats(movieId: String) {
         return this.http.get<Seat[]>(`/api/seats?MovieId=${movieId}`);
+    }
+
+    postSeat(seat: Seat) {
+        return this.http.post<Seat>('/api/seats', seat);
     }
 }
